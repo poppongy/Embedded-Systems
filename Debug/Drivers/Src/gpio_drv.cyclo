@@ -1,0 +1,4 @@
+../Drivers/Src/gpio_drv.c:10:23:gpio_regs	10
+../Drivers/Src/gpio_drv.c:26:13:gpio_clock_enable	10
+../Drivers/Src/gpio_drv.c:44:6:gpio_init_output	1
+../Drivers/Src/gpio_drv.c:54:6:gpio_toggle	1

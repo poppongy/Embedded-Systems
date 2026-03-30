@@ -1,0 +1,2 @@
+../Application/state_machine.c:21:6:state_machine_init	8	static
+../Application/state_machine.c:47:6:state_machine_run	8	static
