@@ -17,7 +17,7 @@ role at build time, mirroring how production automotive firmware handles multi-E
 ## Demonstration
 
 > Demo video link —(https://drive.google.com/file/d/18_L0RWyeXPv93VPFwbovPvYmSwqwT9sN/view?usp=drive_link)
-
+More detailed demo video: longer -- https://drive.google.com/file/d/1Rlh2WCeALQ7uKTBNjeDssGNktXCWxhhP/view?usp=drive_link
 **What the demo shows:**
 - Both nodes running simultaneously on real hardware
 - 100ms heartbeat transmission verified on logic analyzer
