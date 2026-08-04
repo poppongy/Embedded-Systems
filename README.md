@@ -5,6 +5,9 @@ Creating Industry ready Projects
 Real-Time Embedded Control System with Fault-Tolerant Communication
     Bare-metal embedded firmware demonstrating real-time control, interrupt-driven communication, and fault-tolerant state management. Designed for use across automotive, industrial,        aerospace, and medical applications.
 
+# Learning Notes
+	See [docs/learning/](docs/learning/) for detailed notes on implementation decisions.
+
 Table of Contents
 Overview
 Architecture
