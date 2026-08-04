@@ -16,7 +16,7 @@ role at build time, mirroring how production automotive firmware handles multi-E
 
 ## Demonstration
 
-> Demo video link — coming soon
+> Demo video link —(https://drive.google.com/file/d/18_L0RWyeXPv93VPFwbovPvYmSwqwT9sN/view?usp=drive_link)
 
 **What the demo shows:**
 - Both nodes running simultaneously on real hardware
