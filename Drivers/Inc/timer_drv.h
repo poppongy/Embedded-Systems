@@ -16,5 +16,7 @@ typedef struct
 /* Soft timer APIs */
 void timer_start(soft_timer_t *t, uint32_t period_ms);
 uint8_t timer_expired(soft_timer_t *t);
+uint8_t timer_expired_periodic(soft_timer_t *t);
 void timer_reset(soft_timer_t *t);
+
 #endif

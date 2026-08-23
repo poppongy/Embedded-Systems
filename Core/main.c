@@ -33,9 +33,6 @@ int main(void)
 	system_init();
 	app_init();
 
-    //__enable_irq();
-
-
     while (1)
     {
     	app_loop();

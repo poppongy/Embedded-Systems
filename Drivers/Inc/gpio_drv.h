@@ -51,6 +51,13 @@ typedef enum {
 	GPIO_PORT_I
 } gpio_port_t;
 
+typedef enum {
+    GPIO_MODE_INPUT = 0,
+    GPIO_MODE_OUTPUT,
+    GPIO_MODE_AF,
+    GPIO_MODE_ANALOG
+} gpio_mode_t;
+
 #define PIN_0   	0
 #define PIN_1  	 	1
 #define PIN_2   	2
@@ -68,8 +75,34 @@ typedef enum {
 #define PIN_14  	14
 #define PIN_15  	15
 
+/*
+ 	 * PULL UP PULL DOWN RESISTOR CONFIG
+*/
+#define NO_PUPD    		0
+#define PULL_UP         1
+#define PULL_DOWN    	2
 
-void gpio_init_output(gpio_port_t port, uint8_t pin);
+/*
+ 	 * ALTERNATE FUNCTION CONFIG
+*/
+#define AF0							0
+#define AF1   						1
+#define AF2   						2
+#define AF3   						3
+#define AF4   						4
+#define AF5   						5
+#define AF6   						6
+#define AF7   						7
+#define AF8   						8
+#define AF9   						9
+#define AF10   						10
+#define AF11   						11
+#define AF12   						12
+#define AF13   						13
+#define AF14   						14
+#define AF15   						15
+
+void gpio_init(gpio_port_t port, uint8_t pin, gpio_mode_t mode, uint8_t pupd, uint8_t alt);
 void gpio_toggle(gpio_port_t port, uint8_t pin);
 
 #endif /* INC_GPIO_DRV_H_ */

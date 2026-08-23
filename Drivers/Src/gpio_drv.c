@@ -41,14 +41,24 @@ static void gpio_clock_enable(gpio_port_t port)
     //(void)RCC_AHB1ENR; // small sync read
 }
 
-void gpio_init_output(gpio_port_t port, uint8_t pin)
+void gpio_init(gpio_port_t port, uint8_t pin, gpio_mode_t mode, uint8_t pupd, uint8_t alt)
 {
     GPIO_RegDef_t* GPIOx = gpio_regs(port);
     gpio_clock_enable(port);
 
-    // MODER: 01 = general purpose output
+    //clear register bit positions to prevent abnormal behavior
     GPIOx->MODER &= ~(3UL << (pin * 2));
-    GPIOx->MODER |=  (1UL << (pin * 2));
+    GPIOx->MODER |= ((uint32_t) mode << (pin * 2));
+
+    GPIOx->PUPDR &= ~(3UL << (pin * 2));
+    GPIOx->PUPDR |= ((uint32_t)pupd << (pin * 2));
+
+    //configuring alternate function
+    uint32_t temp1 = 0, temp2 = 0;
+    temp1 = pin / 8;
+    temp2 = pin % 8;
+    GPIOx->AFR[temp1] &= ~(0xFUL << (temp2 * 4));
+    GPIOx->AFR[temp1] |= ((uint32_t) alt << (temp2 * 4));
 }
 
 void gpio_toggle(gpio_port_t port, uint8_t pin)

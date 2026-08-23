@@ -9,6 +9,7 @@
 #define SYSTEM_INIT_H_
 
 #include "timer_drv.h"
+
 void system_init(void);
 
 #endif /* SYSTEM_INIT_H_ */
